@@ -1,0 +1,61 @@
+﻿@page "/pokemon/{pokemonId}"
+@inject PokeClient client
+
+
+<div class="container">
+    <div class="card">
+        @if (@poke.types.Count > 0)
+        {
+            <div class="card-top" style="background-color: @PokeColor.GetTypeColor(@poke.types[0].type.name)">
+                <img src="@poke?.sprites?.front_default" alt="pokemon sprite" class="card-img-top">
+            </div>
+        }
+        <div class="inner-container">
+            <div class="stats-head">
+                <div class="icon-container">
+                    <img src="@PokeUtil.GetRandomPokeBall()" alt="" class="poke-icon" />
+                    <h1 class="pokemon-name card-title"><b>@poke?.name</b></h1>
+                </div>
+                <div class="pokemon-info">
+                    <div>
+                        @foreach (var type in poke.types)
+                        {
+                            <span class="type-badge"
+                                style="background-color: @PokeColor.GetTypeColor(@type.type.name);">@type.type.name</span>
+                        }
+                    </div>
+                    <h5>Height: @PokeUtil.GetPokemonHeightInMeters(poke.height) m</h5>
+                    <h5>Weight: @PokeUtil.GetPokemonWeightInKg(poke.weight) kg</h5>
+                </div>
+            </div>
+            <div class="stats-head">
+                <div class="icon-container">
+                    <img src="<https://img.icons8.com/color/48/null/insignia-3.png>" class="poke-icon" />
+                    <h2>Stats</h2>
+                </div>
+                @foreach (var stat in poke?.stats)
+                {
+                    <div class="stat-bar">
+                        <h5 class="stat">@stat.stat.name: @stat.base_stat</h5>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped" role="progressbar"
+                                style="width: @stat.base_stat%; background-color: @PokeColor.GetStatColor(@stat.stat.name);"
+                                aria-valuenow="100" aria-valuemin="0" aria-valuemax="200">
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string pokemonId { get; set; } = "";
+    Pokemon poke = new Pokemon();
+    protected override async Task OnInitializedAsync()
+    {
+        poke = await client.GetPokemon(pokemonId);
+    }
+}

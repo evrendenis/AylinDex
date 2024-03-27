@@ -28,4 +28,20 @@ public class PokeColor
         };
         return color;
     }
+    public static string GetStatColor(string stat)
+    {
+        string color = stat switch
+        {
+            "hp" => "#FF0000",            // Sağlık Puanı için kırmızı
+            "attack" => "#FFA500",        // Saldırı için turuncu
+            "defense" => "#FFFF00",       // Savunma için sarı
+            "special-attack" => "#7FFFD4",// Özel Saldırı için akvaryum mavisi
+            "special-defense" => "#008000", // Özel Savunma için yeşil
+            "speed" => "#0000FF",         // Hız için mavi
+            _ => "#000000"                // Varsayılan olarak siyah
+        };
+        return color;
+
+    }
+
 }
