@@ -1,0 +1,63 @@
+/* Pokemon Cards */
+.pokemon-card {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.pokemon-logo{
+    width: 70%;
+    height: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.pokemon-card img {
+    max-width: 100px;
+    height: auto;
+}
+
+.pokemon-name {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Pokemon Types */
+.type {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.type-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column; /* Dikey hizalama */
+    align-items: center; /* Öğeleri ortalamak için */
+}
+
+/* Pokemon Row */
+.pokemon-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
