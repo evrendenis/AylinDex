@@ -10,9 +10,10 @@ public class PokeClient
         Client = client;
     }
 
+
     public async Task<Pokemon> GetPokemon(string id)
     {
-        // id 125 is the pokemon Picachu
+
         var response = await Client.GetAsync($"https://pokeapi.co/api/v2/pokemon/{id}");
         if (response.IsSuccessStatusCode)
         {

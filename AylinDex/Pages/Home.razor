@@ -3,11 +3,12 @@
 
 <PageTitle>Pokemon</PageTitle>
 
-
 <div class="container">
-    <img src="/img/Pokemon-Logo.png" class="pokemon-logo" />
+    <img src="/img/Pokemon-Logo.png" href="#" class="pokemon-logo" />
+    <input type="text" @bind="searchTerm" placeholder="Pokemon search..." />
+
     <div class="pokemon-row">
-        @foreach (var pokemon in pokemonsList)
+        @foreach (var pokemon in FilteredPokemons)
         {
             <a href="/pokemon/@pokemon.id">
                 <div class="pokemon-card">
@@ -24,22 +25,46 @@
             </a>
         }
     </div>
+
+    <button @onclick="LoadMorePokemons">50 Tane Daha Yükle</button>
+
 </div>
 
 @code {
+    string searchTerm = string.Empty;
     Pokemon pokemon = new Pokemon();
+    Dictionary<int, Pokemon> pokemonsCache = new Dictionary<int, Pokemon>();
+    int currentMax = 50;
 
-    List<Pokemon> pokemonsList = new List<Pokemon>();
-
+    IEnumerable<Pokemon> FilteredPokemons =>
+    pokemonsCache.Values
+    .Where(p => p.name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
+    .OrderBy(p => p.id);
 
     protected override async Task OnInitializedAsync()
     {
+        await LoadPokemons();
+    }
 
-        for (int i = 1; i <= 50; i++)
+    private async Task LoadPokemons()
+    {
+        for (int i = pokemonsCache.Count + 1; i <= currentMax; i++)
         {
-            pokemonsList.Add(await Client.GetPokemon(i.ToString()));
+            if (!pokemonsCache.ContainsKey(i))
+            {
+                var pokemon = await Client.GetPokemon(i.ToString());
+                if (pokemon != null)
+                {
+                    pokemonsCache[i] = pokemon;
+                }
+            }
             StateHasChanged();
-
         }
+    }
+
+    private async Task LoadMorePokemons()
+    {
+        currentMax += 50;
+        await LoadPokemons();
     }
 }
