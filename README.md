@@ -2,6 +2,9 @@
 
 AylinDex is a web application that allows Pokémon enthusiasts to gather information about Pokémon and explore their world. This application utilizes third-party APIs to fetch Pokémon data and provides users with a platform to search, view, and discover various Pokémon species. AylinDex is designed to be modular and extensible, welcoming contributions from developers to enhance its features and functionality.
 
+![Screen 1 ](https://github.com/evrendenis/AylinDex/assets/155571902/eab9dd24-7f5e-402d-a4ba-f0122424f9d6)
+
+
 ## Features
 
 - **Pokémon Search:** Users can easily search for their favorite Pokémon using the search bar. Search results are dynamically filtered, enabling users to quickly find the Pokémon they are looking for.
@@ -12,6 +15,9 @@ AylinDex is a web application that allows Pokémon enthusiasts to gather informa
 
 - **Third-party Integration:** AylinDex integrates with third-party Pokémon APIs to fetch Pokémon data, ensuring accurate and up-to-date information for users.
 
+  ![Screen 3 ](https://github.com/evrendenis/AylinDex/assets/155571902/7ad8df18-7d49-483a-86cd-95855ad3c628)
+
+
 ## Usage
 
 1. **Search:** Type the name of the Pokémon you want to search for in the search bar and observe the results.
@@ -19,6 +25,9 @@ AylinDex is a web application that allows Pokémon enthusiasts to gather informa
 2. **Pagination:** Use pagination buttons to browse through the Pokémon list.
 
 3. **Detailed Information:** Click on each Pokémon card to access detailed information.
+
+   ![Screen 2 ](https://github.com/evrendenis/AylinDex/assets/155571902/36d5af8c-6627-4708-95cc-d3af5cbea652)
+
 
 ## Contribution
 
@@ -33,6 +42,9 @@ This description highlights the technical aspects of the project, including the 
 # AylinDex - Pokémon Bilgi Portalı
 AylinDex, Pokémon hayranlarının Pokémon'lar hakkında bilgi edinmelerini ve onların dünyasını keşfetmelerini sağlayan bir web uygulamasıdır. Bu uygulama, Pokémon verilerini almak için üçüncü taraf API'ları kullanır ve kullanıcılara çeşitli Pokémon türlerini arama, görüntüleme ve keşfetme platformu sunar. AylinDex, özelliklerini ve işlevselliğini geliştirmek için geliştiricilerden katkılar almayı amaçlayan modüler ve genişletilebilir bir tasarıma sahiptir.
 
+![Screen 1 ](https://github.com/evrendenis/AylinDex/assets/155571902/eab9dd24-7f5e-402d-a4ba-f0122424f9d6)
+
+
 ## Özellikler
 - **Pokémon Arama:** Kullanıcılar favori Pokémon'larını aramak için arama çubuğunu kullanabilirler. Arama sonuçları dinamik olarak filtrelenir, kullanıcıların aradıkları Pokémon'u hızlıca bulmalarını sağlar.
 
@@ -42,12 +54,18 @@ AylinDex, Pokémon hayranlarının Pokémon'lar hakkında bilgi edinmelerini ve 
 
 - **Üçüncü Taraf Entegrasyonu:** AylinDex, kullanıcılar için doğru ve güncel bilgiler sağlamak için üçüncü taraf Pokémon API'larıyla entegre çalışır.
 
+  ![Screen 3 ](https://github.com/evrendenis/AylinDex/assets/155571902/7ad8df18-7d49-483a-86cd-95855ad3c628)
+
+
 ## Kullanım
-- **Arama:** Aramak istediğiniz Pokémon'un adını arama çubuğuna yazın ve sonuçları gözlemleyin.
+1 **Arama:** Aramak istediğiniz Pokémon'un adını arama çubuğuna yazın ve sonuçları gözlemleyin.
 
-- **Sayfalama:** Pokémon listesini göz atmak için sayfa düğmelerini kullanın.
+2 **Sayfalama:** Pokémon listesini göz atmak için sayfa düğmelerini kullanın.
 
-- **Detaylı Bilgi:** Her Pokémon kartının üzerine tıklayarak detaylı bilgilere erişin.
+3 **Detaylı Bilgi:** Her Pokémon kartının üzerine tıklayarak detaylı bilgilere erişin.
+
+  ![Screen 2 ](https://github.com/evrendenis/AylinDex/assets/155571902/36d5af8c-6627-4708-95cc-d3af5cbea652)
+
 
 ## Katkıda Bulunma
 Katılımcılar, GitHub deposunu çatallayarak kendi geliştirmelerini yapabilir ve hata düzeltmeleri, öneriler ve yeni özellikler için pull istekleri gönderebilirler.
